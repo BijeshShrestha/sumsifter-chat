@@ -1,0 +1,25 @@
+{
+    "id": "doc1",
+    "summary": [
+        {
+            "sentence": "The Summer Conference on Applied Data Science (SCADS) is an annual research program focused on the development of AI to assist the US Intelligence Community (IC) data analysts, identifying a multi-year Grand Challenge to guide the research.",
+            "sources": ["S10", "S11"]
+        },
+        {
+            "sentence": "The Grand Challenge for SCADS is to create Tailored Daily Reports (TLDRs) for individual knowledge workers within the IC, combining classified and unclassified material from various modes and formats.",
+            "sources": ["S13", "S14", "S15"]
+        },
+        {
+            "sentence": "The research efforts in 2024 will focus on Automatic Summarization, Recommendation Systems, and Human-Machine Interaction, with an emphasis on explainability, contextualization, and knowledge representation.",
+            "sources": ["S16", "S17"]
+        },
+        {
+            "sentence": "The document presents critical challenges and research questions related to the grand challenge, and identifies Large Language Models (LLMs) like GPT-3.5 and GPT-4 as potential tools for the research.",
+            "sources": ["S19", "S22", "S23"]
+        },
+        {
+            "sentence": "Automatic summarization, a key to creating a TLDR, involves both extractive and abstractive summarization, and the document encourages research in multi-modal summarization techniques.",
+            "sources": ["S24", "S25", "S26", "S27"]
+        }
+    ]
+}

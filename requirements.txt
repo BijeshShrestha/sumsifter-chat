@@ -4,3 +4,4 @@ flask
 docx2txt
 python-docx
 openai==0.28.0
+pydantic

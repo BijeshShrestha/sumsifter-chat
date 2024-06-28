@@ -32,11 +32,11 @@ Each sentence in the summary must be attributed to sentences in the original art
 Use the following json format to answer. 
 {
     "summary": [
-        {"text": "Sentence 1", "sources": ["s1", "s2"]},
-        {"text": "Sentence 22", "sources": ["s3", "s4"]},
-        {"text": "Sentence 33", "sources": ["s5", "s6"]},
-        {"text": "Sentence 44", "sources": ["s7", "s8"]},
-        {"text": "Sentence 55", "sources": ["s9", "s10"]}
+        {"text": "Sentence 1", "sources": ["S1", "S2"]},
+        {"text": "Sentence 22", "sources": ["S3", "S4"]},
+        {"text": "Sentence 33", "sources": ["S5", "S6"]},
+        {"text": "Sentence 44", "sources": ["S7", "S8"]},
+        {"text": "Sentence 55", "sources": ["S9", "S10"]}
     ]
 }
 Do not include any text outside of the JSON format.

@@ -6,4 +6,4 @@ python-dotenv
 flask
 docx2txt
 python-docx
-
+openai==0.28.0

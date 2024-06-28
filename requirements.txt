@@ -1,7 +1,4 @@
-streamlit
-llama_index
-llama-index-core
-matplotlib
+
 python-dotenv
 flask
 docx2txt

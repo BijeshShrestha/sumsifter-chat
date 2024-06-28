@@ -126,18 +126,15 @@ Please provide a 100-word summary of the article.
 Each sentence in the original article ends with a sentence ID in the form of "(S1)", "(S2)", and so on. 
 Each sentence in the summary must be attributed to sentences in the original article by citing the sentence IDs. 
 Use the following json format to answer. 
-eturn jsonify({
-        "summary": [
-            {"sentence": "Sentence 1", "summary": ["s1", "s2"]},
-            {"sentence": "Sentence 2", "summary": ["s3", "s4"]}
-        ],
-        "source": [
-            {"id": "s1", "sentence": "This is source sentence 1"},
-            {"id": "s2", "sentence": "This is source sentence 2"},
-            {"id": "s3", "sentence": "This is source sentence 3"},
-            {"id": "s4", "sentence": "This is source sentence 4"},
-        ]
-    })
+{
+    "summary": [
+        {"text": "Sentence 1", "sources": ["s1", "s2"]},
+        {"text": "Sentence 22", "sources": ["s3", "s4"]},
+        {"text": "Sentence 33", "sources": ["s5", "s6"]},
+        {"text": "Sentence 44", "sources": ["s7", "s8"]},
+        {"text": "Sentence 55", "sources": ["s9", "s10"]}
+    ]
+}
 Do not include any text outside of the JSON format.
 """
 
@@ -171,11 +168,15 @@ def process_inquiry():
     response_text = response['choices'][0]['message']['content'].strip()
     
     # Extract JSON from the response text
-    start_index = response_text.find('{')
-    end_index = response_text.rfind('}') + 1
-    json_response = response_text[start_index:end_index]
+    try:
+        start_index = response_text.find('{')
+        end_index = response_text.rfind('}') + 1
+        json_response = response_text[start_index:end_index]
+        json_response = eval(json_response)  # Convert string to dict for JSON response
+    except Exception as e:
+        return jsonify({"error": "Failed to parse response", "details": str(e)}), 500
     
-    return jsonify({"response": json_response})
+    return jsonify(json_response)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
